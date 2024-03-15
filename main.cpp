@@ -1,6 +1,12 @@
 #include <iostream>
+#include "complex/ComplexTest.h"
+
+void TestareClasaComplex() {
+    ComplexTest complexTest;
+    complexTest.Test();
+}
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    TestareClasaComplex();
     return 0;
 }
