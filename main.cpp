@@ -1,12 +1,9 @@
 #include <iostream>
-#include "complex/ComplexTest.h"
-
-void TestareClasaComplex() {
-    ComplexTest complexTest;
-    complexTest.Test();
-}
+#include "bunicuta/BunicutaTest.h"
 
 int main() {
-    TestareClasaComplex();
+    BunicutaTest bunicutaTest;
+    bunicutaTest.Test();
+
     return 0;
 }
