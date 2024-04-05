@@ -17,6 +17,7 @@ class BunicutaTest {
     void TestAfisare();
     void TestUpcastingSiDowncastingPointeri();
     void TestUpcastingSiDowncastingReferinta();
+    void TestCantitateGem();
 public:
     void Test();
 };

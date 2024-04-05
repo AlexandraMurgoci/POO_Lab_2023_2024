@@ -22,6 +22,7 @@ public:
     void SetLatura(double latura);
 
     void Afisare();
+    double CantitateGem() { return 2 * inaltime * latura * latura; }
 };
 
 

@@ -78,10 +78,16 @@ void BunicutaTest::TestUpcastingSiDowncastingReferinta() {
     AfisareForma(formaPatrat);
 }
 
+void BunicutaTest::TestCantitateGem() {
+    FormaPatrat patrat(2,5);
+    std::cout << patrat.CantitateGem();
+}
+
 void BunicutaTest::Test() {
 //    TestareMetodaBaza();
 //    TestareOrdineConstructoriSiDestructori();
 //    TestAfisare();
 //    TestUpcastingSiDowncastingPointeri();
-    TestUpcastingSiDowncastingReferinta();
+//    TestUpcastingSiDowncastingReferinta();
+    TestCantitateGem();
 }
