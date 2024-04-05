@@ -31,3 +31,10 @@ void Forma::SetInaltime(double inaltime) {
 void Forma::Afisare() {
     std::cout << "Forma: inaltime - " << inaltime << std::endl;
 }
+
+double Forma::Volum() {
+    return inaltime * AriaBazei();
+}
+double Forma::CantitateGem() {
+    return 2 * Volum();
+}

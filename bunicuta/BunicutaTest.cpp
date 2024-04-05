@@ -81,6 +81,11 @@ void BunicutaTest::TestUpcastingSiDowncastingReferinta() {
 void BunicutaTest::TestCantitateGem() {
     FormaPatrat patrat(2,5);
     std::cout << patrat.CantitateGem();
+
+    std::cout << std::endl;
+
+    Forma *patrat2 = new FormaPatrat(2,5);
+    std::cout << patrat2 -> CantitateGem();
 }
 
 void BunicutaTest::Test() {

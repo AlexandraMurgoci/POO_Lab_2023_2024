@@ -10,6 +10,11 @@
 
 class FormaPatrat: public Forma {
     double latura;
+private:
+    //suprascriem si, defapt, oferim implementare pentru metoda pura a bazei, astfel ca FormaPatrat nu mai este clasa abstracta si se poate instantia
+    //acum se poate afla cantitatea de gem pentru o FormaPatrat, folosind implementarile din Forma si implementarea pentru AriaBazei()
+    //tokenul "override" nu este necesar pentru functionarea programului, dar ajuta la documentare, este mai clar pentru programator faptul ca o metoda este suprascrisa (vezi mai jos, la Afisare nu s-a folosit)
+    double AriaBazei() override;
 public:
     //constructori I (param si neparam)
     FormaPatrat();
@@ -22,7 +27,6 @@ public:
     void SetLatura(double latura);
 
     void Afisare();
-    double CantitateGem() { return 2 * inaltime * latura * latura; }
 };
 
 

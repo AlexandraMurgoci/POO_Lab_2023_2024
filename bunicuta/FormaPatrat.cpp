@@ -32,3 +32,7 @@ void FormaPatrat::SetLatura(double latura) {
 void FormaPatrat::Afisare() {
     std::cout << "FormaPatrat: inaltime - " << inaltime << "; latura - " << latura << std::endl;
 }
+
+double FormaPatrat::AriaBazei() {
+    return latura * latura;
+}
