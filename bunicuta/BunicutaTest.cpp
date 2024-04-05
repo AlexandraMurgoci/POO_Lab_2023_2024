@@ -23,8 +23,8 @@ void BunicutaTest::TestareOrdineConstructoriSiDestructori() {
 
 void BunicutaTest::TestAfisare() {
     //afisarea merge as expected (cu sau fara virtual Afisare in acest exemplu)
-    Forma forma(2);
-    forma.Afisare();
+//    Forma forma(2);
+//    forma.Afisare();
 
     FormaPatrat patrat(3, 5);
     patrat.Afisare();
@@ -34,8 +34,8 @@ void BunicutaTest::TestUpcastingSiDowncastingPointeri() {
     //remarcam comportamentul celor de mai jos cu si fara virtual Afisare
     //fara virtual Afisare, se apeleaza metodele din baza (Forma), ci nu din FormaPatrat
 
-    Forma *forma = new Forma(2);
-    forma -> Afisare();
+//    Forma *forma = new Forma(2);
+//    forma -> Afisare();
 
     //upcasting, retin o FormaPatrat intr-un pointer la Forma
     Forma *patrat = new FormaPatrat(3, 5);
@@ -56,7 +56,7 @@ void BunicutaTest::TestUpcastingSiDowncastingPointeri() {
     //daca vrem sa memoram toate formele bunicutei (demo pentru cerinta problemei bunicuta)
     std::vector<Forma*> formeleBunicutei;
     //pt info despre vector: https://en.cppreference.com/w/cpp/container/vector
-    formeleBunicutei.push_back(forma);
+//    formeleBunicutei.push_back(forma);
     formeleBunicutei.push_back(patrat);
     for(int i = 0; i < formeleBunicutei.size(); i++) {
         formeleBunicutei[i] -> Afisare();

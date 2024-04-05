@@ -26,7 +26,7 @@ public:
     virtual void Afisare();
     //TODO implementare CantitateFrisca si CantitateGem
     virtual double CantitateFrisca() {return 0;}
-    virtual double CantitateGem() {return 0;}
+    virtual double CantitateGem() = 0;
 };
 
 
