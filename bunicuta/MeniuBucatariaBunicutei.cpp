@@ -21,6 +21,10 @@ void MeniuBucatariaBunicutei::DisplayMenuMessage() {
         << std::endl;
 }
 
+void MeniuBucatariaBunicutei::SetBucatarie(BucatariaBunicutei * bucatarie) {
+    this -> bucatarie = bucatarie;
+}
+
 void MeniuBucatariaBunicutei::RunMenu() {
     DisplayMenuMessage();
 
@@ -30,15 +34,19 @@ void MeniuBucatariaBunicutei::RunMenu() {
     while (command != STOP) {
         if(command == ADD) {
             //TODO
+//            bucatarie -> AdaugaForma();
         }
         else if(command == REMOVE) {
             //TODO
+//            bucatarie -> StergeForma();
         }
         else if(command == DISPLAY_ALL) {
             //TODO
+//            bucatarie -> AfiseazaToateFormele();
         }
         else if(command == TOTAL) {
             //TODO
+//            bucatarie -> TotalGemSiFrisca();
         }
         else {
             std::cout << "Comanda invalida: " << command << std::endl;

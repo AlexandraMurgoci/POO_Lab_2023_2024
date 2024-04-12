@@ -8,8 +8,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "BucatariaBunicutei.h"
 
 class MeniuBucatariaBunicutei {
+    BucatariaBunicutei * bucatarie;
 
     //membri statici
     static const std::string ADD;
@@ -19,6 +21,7 @@ class MeniuBucatariaBunicutei {
     static const std::string STOP;
     void DisplayMenuMessage();
 public:
+    void SetBucatarie(BucatariaBunicutei * bucatarie);
     void RunMenu();
     //metoda statica
     static std::vector<std::string> GetAllCommands();
