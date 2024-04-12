@@ -10,13 +10,19 @@ void BunicutaTestIndividuale() {
 int main() {
 //    BunicutaTestIndividuale();
 
+    BucatariaBunicutei *bucatarie = new BucatariaBunicutei();
+
     MeniuBucatariaBunicutei menu;
+    menu.SetBucatarie(bucatarie);
+
     menu.RunMenu();
 
+    delete bucatarie;
+
     //apelare metoda statica
-    std::vector<std::string> comenzi = MeniuBucatariaBunicutei::GetAllCommands();
+//    std::vector<std::string> comenzi = MeniuBucatariaBunicutei::GetAllCommands();
     //se poate apela si folosind un obiect
-    comenzi = menu.GetAllCommands();
+//    comenzi = menu.GetAllCommands();
 
     return 0;
 }

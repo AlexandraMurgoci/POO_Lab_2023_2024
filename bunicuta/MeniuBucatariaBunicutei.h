@@ -9,6 +9,8 @@
 #include <string>
 #include <vector>
 #include "BucatariaBunicutei.h"
+#include "FormaPatrat.h"
+#include "FormaDreptunghi.h"
 
 class MeniuBucatariaBunicutei {
     BucatariaBunicutei * bucatarie;

@@ -33,20 +33,30 @@ void MeniuBucatariaBunicutei::RunMenu() {
 
     while (command != STOP) {
         if(command == ADD) {
-            //TODO
-//            bucatarie -> AdaugaForma();
+            //TODO submeniu pentru citire forma; ce forma citim?
+
+//            bucatarie -> AdaugaForma(new FormaPatrat(2, 5));
+//            bucatarie -> AdaugaForma(new FormaDreptunghi(2, 3, 5));
+
+            FormaPatrat *patrat = new FormaPatrat;
+            std::cin >> *patrat;
+            bucatarie ->AdaugaForma(patrat);
+
+            FormaDreptunghi * dreptunghi = new FormaDreptunghi;
+            std::cin >> *dreptunghi;
+            bucatarie ->AdaugaForma(dreptunghi);
         }
         else if(command == REMOVE) {
             //TODO
 //            bucatarie -> StergeForma();
         }
         else if(command == DISPLAY_ALL) {
-            //TODO
-//            bucatarie -> AfiseazaToateFormele();
+            bucatarie -> AfiseazaToateFormele();
+            std::cout << std::endl;
         }
         else if(command == TOTAL) {
-            //TODO
-//            bucatarie -> TotalGemSiFrisca();
+            std::cout << "Total cantitate gem: " << bucatarie -> TotalGem() << std::endl;
+            std::cout << "Total cantitate frisca: " << bucatarie -> TotalFrisca() << std::endl;
         }
         else {
             std::cout << "Comanda invalida: " << command << std::endl;

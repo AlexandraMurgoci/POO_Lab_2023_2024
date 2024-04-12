@@ -24,3 +24,13 @@ void FormaDreptunghi::SetLaturaMica(double laturaMica) {
 void FormaDreptunghi::SetLaturaMare(double laturaMare) {
     this -> laturaMare = laturaMare;
 }
+
+void FormaDreptunghi::Afisare(std::ostream& out) {
+    out << "FormaDreptunghi: inaltime - " << inaltime << "; latura mica - " << laturaMica << "; latura mare - " << laturaMare << std::endl;
+}
+
+std::istream& operator>>(std::istream& in, FormaDreptunghi& dreptunghi) {
+    in >> dreptunghi.laturaMica >> dreptunghi.laturaMare;
+    in >> dynamic_cast<Forma&>(dreptunghi);
+    return in;
+}

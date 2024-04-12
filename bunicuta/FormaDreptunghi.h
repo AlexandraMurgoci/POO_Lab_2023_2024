@@ -23,6 +23,11 @@ public:
     double GetLaturaMare();
     void SetLaturaMica(double laturaMica);
     void SetLaturaMare(double laturaMare);
+
+    void Afisare(std::ostream& out);
+    using Forma::Afisare;
+
+    friend std::istream& operator>>(std::istream& in, FormaDreptunghi& dreptunghi);
 };
 
 

@@ -28,8 +28,12 @@ void Forma::SetInaltime(double inaltime) {
 }
 
 //metode ce vor fi suprascrise (override)
+void Forma::Afisare(std::ostream& out) {
+    out << "Forma: inaltime - " << inaltime << std::endl;
+}
+
 void Forma::Afisare() {
-    std::cout << "Forma: inaltime - " << inaltime << std::endl;
+    Afisare(std::cout);
 }
 
 double Forma::Volum() {
@@ -37,4 +41,15 @@ double Forma::Volum() {
 }
 double Forma::CantitateGem() {
     return 2 * Volum();
+}
+
+
+std::ostream& operator<<(std::ostream& out, Forma& forma) {
+    forma.Afisare(out);
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, Forma& forma) {
+    in >> forma.inaltime;
+    return in;
 }

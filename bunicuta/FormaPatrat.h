@@ -26,7 +26,11 @@ public:
     double GetLatura();
     void SetLatura(double latura);
 
-    void Afisare();
+    void Afisare(std::ostream& out);
+    //overload pe Afisare(out) ascunde metoda Afisare() din baza; avem nevoie de using ca sa o folosim in continuare
+    using Forma::Afisare;
+
+    friend std::istream& operator>>(std::istream& in, FormaPatrat& patrat);
 };
 
 

@@ -29,10 +29,16 @@ void FormaPatrat::SetLatura(double latura) {
 }
 
 
-void FormaPatrat::Afisare() {
-    std::cout << "FormaPatrat: inaltime - " << inaltime << "; latura - " << latura << std::endl;
+void FormaPatrat::Afisare(std::ostream& out) {
+    out << "FormaPatrat: inaltime - " << inaltime << "; latura - " << latura << std::endl;
 }
 
 double FormaPatrat::AriaBazei() {
     return latura * latura;
+}
+
+std::istream& operator>>(std::istream& in, FormaPatrat& patrat) {
+    in >> patrat.latura;
+    in >> dynamic_cast<Forma&>(patrat);
+    return in;
 }

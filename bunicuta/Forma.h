@@ -30,13 +30,18 @@ public:
     void SetInaltime(double inaltime);
 
     //metode ce vor fi suprascrise (override) - deci si metode care trebuie sa fie virtuale
-    virtual void Afisare();
+    virtual void Afisare(std::ostream& out);
+    void Afisare();
     //TODO implementare CantitateFrisca
     virtual double CantitateFrisca() {return 0;}
     //ne folosim de Volum() si indirect de AriaBazei() pentru a afla cantitatea de gem
     //pentru ca AriaBazei este virtuala; nu mai este nevoie neaparat sa trecem si aici virtual
     double CantitateGem();
+
+    friend std::istream& operator>>(std::istream& in, Forma& forma);
 };
+
+std::ostream& operator<<(std::ostream& out, Forma& forma);
 
 
 #endif //POO_LAB_2023_2024_FORMA_H

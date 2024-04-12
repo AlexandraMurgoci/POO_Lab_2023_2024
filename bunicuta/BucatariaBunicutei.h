@@ -12,7 +12,13 @@
 class BucatariaBunicutei {
     std::vector<Forma*> forme;
 public:
-    //TODO
+    //TODO CI, CC, op=, D
+
+    void AdaugaForma(Forma*);
+    //TODO remove
+    void AfiseazaToateFormele();
+    double TotalGem();
+    double TotalFrisca();
 };
 
 
